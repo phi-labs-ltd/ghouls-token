@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NftInfoResponse",
+  "type": "object",
+  "properties": {
+    "extension": {
+      "description": "You can add any custom metadata here when you extend cw721-base",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Metadata"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "token_uri": {
+      "description": "Universal resource identifier for this NFT Should point to a JSON file that conforms to the ERC721 Metadata JSON Schema",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "definitions": {
+    "AssetFile": {
+      "type": "object",
+      "properties": {
+        "cdn": {
+          "description": "Whether the file is served from a CDN.",
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "resolution": {
+          "description": "Defines the file's resolution if applicable",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "size": {
+          "description": "The files size if applicable",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "type": {
+          "description": "The file's type",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "uri": {
+          "description": "The file's URI",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Attribute": {
+      "type": "object",
+      "properties": {
+        "trait_type": {
+          "description": "The type of attribute",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "description": "The value for that attribute",
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "Metadata": {
+      "type": "object",
+      "properties": {
+        "animation_url": {
+          "description": "URI pointing to the asset's animation",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "attributes": {
+          "description": "Array of attributes defining the characteristics of the asset",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/Attribute"
+          }
+        },
+        "description": {
+          "description": "Description of the asset",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "external_url": {
+          "description": "URI pointing to an external URL defining the asset",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "image": {
+          "description": "URI pointing to the asset's logo",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "description": "Name of the asset",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "properties": {
+          "description": "Additional properties that define the asset",
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Properties"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "Properties": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "description": "A media category for the asset",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "files": {
+          "description": "Additional files to include with the asset",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/AssetFile"
+          }
+        }
+      }
+    }
+  }
+}
