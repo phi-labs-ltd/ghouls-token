@@ -129,7 +129,6 @@ mod tests {
             animation_url: None,
             external_url: None,
             properties: None,
-
         });
 
         let token_id = "1";
@@ -137,7 +136,7 @@ mod tests {
             token_id: token_id.to_string(),
             owner: CREATOR.to_string(),
             token_uri: None,
-            extension: metadata_extension
+            extension: metadata_extension,
         };
         let exec_msg = ExecuteMsg::Mint(mint_msg.clone());
         contract
