@@ -1,5 +1,5 @@
 {
-  "name": "archies-token",
+  "name": "ghouls-token",
   "developer": {
     "archwayd": {
       "docker": false
@@ -12,7 +12,43 @@
       "query": "archwayd query wasm",
       "tx": "archwayd tx wasm execute"
     },
-    "deployments": []
+    "deployments": [
+      {
+        "project": "ghouls-token",
+        "type": "set-metadata",
+        "chainId": "constantine-3",
+        "codeId": 3915,
+        "txhash": "1CDFA28B867444DC78AD9B3AE0B830B1E93AC12F8BEC5ACF376201891BD59E72",
+        "contract": "archway1zy6u4hgxcczwd72ccy6yrn2e0hn4c7gxwpjp8msesugj4q6q2j6qs6mt7h",
+        "contractMetadata": {
+          "ownerAddress": "archway1d4mz3n63m6gm608d2qctleersn2z2xumqjlj7z",
+          "rewardsAddress": "archway1d4mz3n63m6gm608d2qctleersn2z2xumqjlj7z"
+        }
+      },
+      {
+        "project": "ghouls-token",
+        "type": "instantiate",
+        "chainId": "constantine-3",
+        "codeId": 3915,
+        "txhash": "31A51CF7548FC7E82C8A521CDDB2A51F86B66DFFA8639C65F82BD50D48A92B31",
+        "address": "archway1zy6u4hgxcczwd72ccy6yrn2e0hn4c7gxwpjp8msesugj4q6q2j6qs6mt7h",
+        "admin": "archway1d4mz3n63m6gm608d2qctleersn2z2xumqjlj7z",
+        "label": "Ghouls NFT",
+        "args": {
+          "name": "The Ghouls",
+          "symbol": "GHOUL",
+          "minter": "archway1n3hj89ykn25qfm5umkr8rth5r8q44ay9evynaw9rzwfltlgy7tzqjyrqgz"
+        }
+      },
+      {
+        "project": "ghouls-token",
+        "type": "store",
+        "chainId": "constantine-3",
+        "codeId": 3915,
+        "checksum": "371c8c5c65bf8cb03e3067e171adc37baa6e784402615cd2728396e18fbadb8c",
+        "txhash": "9354A9AAFAEEB5125B9ED3D25103756144E74DB7CDD48AEB152A24019B17F93F"
+      }
+    ]
   },
   "network": {
     "name": "Archway",
