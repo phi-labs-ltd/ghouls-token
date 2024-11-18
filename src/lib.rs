@@ -86,6 +86,17 @@ pub mod entry {
         if original_version.version >= version {
             return Err(ContractError::Unauthorized {});
         }
+
+        // BEGIN v0.1.1 State Migration
+        let info = ContractInfoResponse {
+            name: "Ghouls".to_string(),
+            symbol: "GHOUL".to_string(),
+        };
+        Cw721MetadataContract::default()
+            .contract_info
+            .save(deps.storage, &info)?;
+        // END v0.1.1 State Migration
+
         set_contract_version(deps.storage, CONTRACT_NAME, CONTRACT_VERSION)?;
         Ok(Response::default())
     }
