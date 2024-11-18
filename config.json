@@ -15,6 +15,22 @@
     "deployments": [
       {
         "project": "ghouls-token",
+        "type": "migrate",
+        "chainId": "constantine-3",
+        "codeId": 3970,
+        "contract": "archway1zy6u4hgxcczwd72ccy6yrn2e0hn4c7gxwpjp8msesugj4q6q2j6qs6mt7h",
+        "txhash": "A6F988ABFD8570DACB1F4A1A893616360598B4DAF4986F6298825B51CBD54CFC"
+      },
+      {
+        "project": "ghouls-token",
+        "type": "store",
+        "chainId": "constantine-3",
+        "codeId": 3970,
+        "checksum": "c2dc6f585e9895796331945533c3a4d4c679c313b6ef9cf90ad551f874a3733a",
+        "txhash": "CCEC2C64C894387B53843998FD2DD3FBB153286474B69732389399B7CB2ACA66"
+      },
+      {
+        "project": "ghouls-token",
         "type": "set-metadata",
         "chainId": "constantine-3",
         "codeId": 3915,
