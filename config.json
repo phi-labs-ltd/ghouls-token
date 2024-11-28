@@ -18,6 +18,33 @@
         "type": "set-metadata",
         "chainId": "constantine-3",
         "codeId": 3915,
+        "txhash": "857B64886F0DD0FE4BD96BFCDBC76246BF36F93BBE278F10EED8313B3B49EDF3",
+        "contract": "archway1n626z76ahzrcn67tls4enua4q2mvyfdm59anl9zh8hwcsdjemtjqjk040h",
+        "contractMetadata": {
+          "ownerAddress": "archway1d4mz3n63m6gm608d2qctleersn2z2xumqjlj7z",
+          "rewardsAddress": "archway1d4mz3n63m6gm608d2qctleersn2z2xumqjlj7z"
+        }
+      },
+      {
+        "project": "ghouls-token",
+        "type": "instantiate",
+        "chainId": "constantine-3",
+        "codeId": 3915,
+        "txhash": "C70B0F5F2855FAA8C18008DD0A26D7EC96DF677090A3E71A3C4B57BDB72ECCB4",
+        "address": "archway1n626z76ahzrcn67tls4enua4q2mvyfdm59anl9zh8hwcsdjemtjqjk040h",
+        "admin": "archway1d4mz3n63m6gm608d2qctleersn2z2xumqjlj7z",
+        "label": "Ghouls NFT",
+        "args": {
+          "name": "Ghouls",
+          "symbol": "GHOUL",
+          "minter": "archway1sc0aaznwajud4002k6q8jlld3g8xax8ppm8ccr46kwp936c6pskqks05lu"
+        }
+      },
+      {
+        "project": "ghouls-token",
+        "type": "set-metadata",
+        "chainId": "constantine-3",
+        "codeId": 3915,
         "txhash": "E9EB92F0DDA515021C7CEC792ACDE45F5FC1DBA37F959D6FAE7E9B8DF55D924A",
         "contract": "archway1xqtmj63pkxg5telf2uhe4wfe20l3ewhaug9hqp8jeaxwpkgnsrps2rp3a6",
         "contractMetadata": {
